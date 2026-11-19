@@ -14,17 +14,12 @@ function fit() {
   const mobile = w < 520;
   stage.classList.toggle('desktop', !mobile);
   if (mobile) {
-    // 휴대폰: 기본은 화면 너비에 꽉 차게. 화면이 짧은 기기(아이폰 SE 등)는 아래가 잘리지 않게 높이에 맞춰 줄여요
+    // 휴대폰: 화면 너비에 꽉 차게. 세로가 짧은 기기는 온보딩 아래쪽 버튼들을 위로 끌어올려요 (fitlayout.js)
     // 홈 화면 앱으로 열면 휴대폰의 진짜 상태바가 이미 위를 차지하니까, 화면 속 상태바 자리(54px)만큼 위로 올려요
     const app = matchMedia('(display-mode: standalone)').matches || matchMedia('(display-mode: fullscreen)').matches || navigator.standalone === true;
     const off = app ? 54 : 0;
-    let s = w / 402;
-    if (h / s + off < 874) {
-      s = h / (874 - off);
-      phone.style.height = '874px';
-    } else {
-      phone.style.height = `${h / s + off}px`;
-    }
+    const s = w / 402;   // 항상 화면 폭에 꽉 차게
+    phone.style.height = `${h / s + off}px`;
     // 가운데 정렬을 직접 계산해요 (기기마다 어긋나거나 한쪽이 잘리지 않게)
     phone.style.transformOrigin = '0 0';
     phone.style.transform = `translate(${(w - 402 * s) / 2}px, ${-off * s}px) scale(${s})`;

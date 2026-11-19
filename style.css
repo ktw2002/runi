@@ -1798,3 +1798,6 @@ p.abs { white-space: nowrap; }
 
 /* 확대 막기: 두 번 톡톡 눌러도 확대되지 않고, 스크롤만 돼요 */
 html, body { touch-action: pan-x pan-y; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+
+/* 화면이 짧을 때 맨 아래에 붙는 큰 버튼 */
+.pinned-btn { z-index: 60 !important; box-shadow: 0 -10px 18px 10px #fff, 0 4px 12px rgba(60,100,240,.25) !important; }

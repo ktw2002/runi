@@ -681,6 +681,7 @@
     ['gesturestart', 'gesturechange', 'gestureend'].forEach(t => document.addEventListener(t, e => e.preventDefault(), { passive: false }));
     document.addEventListener('touchmove', e => { if (e.touches.length > 1) e.preventDefault(); }, { passive: false });
   </script>
+  <script src="fitlayout.js"></script>
   <script src="pwa.js"></script>
 </body>
 </html>
