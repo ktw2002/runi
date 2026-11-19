@@ -16,8 +16,11 @@ function fit() {
   if (mobile) {
     // 휴대폰: 화면 너비에 꽉 차게
     const s = w / 402;
-    phone.style.transform = `scale(${s})`;
-    phone.style.height = `${h / s}px`;
+    // 홈 화면 앱으로 열면 휴대폰의 진짜 상태바가 이미 위를 차지하니까, 화면 속 상태바 자리(54px)만큼 위로 올려요
+    const app = matchMedia('(display-mode: standalone)').matches || matchMedia('(display-mode: fullscreen)').matches || navigator.standalone === true;
+    const off = app ? 54 : 0;
+    phone.style.transform = `translateY(${-off * s}px) scale(${s})`;
+    phone.style.height = `${h / s + off}px`;
     stage.style.paddingTop = '0';
   } else {
     // 컴퓨터: 가운데에 휴대폰 모양으로
