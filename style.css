@@ -1794,3 +1794,6 @@ p.abs { white-space: nowrap; }
 .a2hs-arrow { position: absolute; bottom: max(40px, env(safe-area-inset-bottom)); left: 50%; transform: translateX(-50%); font-size: 40px; color: #fff; text-shadow: 0 2px 8px rgba(0,0,0,.4); animation: a2hsBob 1s ease-in-out infinite; }
 @keyframes a2hsBob { 50% { transform: translate(-50%, 10px); } }
 @keyframes a2hsFade { from { opacity: 0; } }
+
+/* 확대 막기: 두 번 톡톡 눌러도 확대되지 않고, 스크롤만 돼요 */
+html, body { touch-action: pan-x pan-y; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }

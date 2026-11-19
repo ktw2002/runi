@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=auto" />
   <!-- 홈 화면에 추가하면 주소창 · 탭 없이 앱처럼 전체 화면으로 열려요 -->
   <link rel="manifest" href="manifest.json" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -677,6 +677,9 @@
     // 그림 저장 막기 (우클릭 · 길게 누르기 메뉴 · 끌어다 놓기)
     document.addEventListener('contextmenu', e => { if (!e.target.closest('input,textarea')) e.preventDefault(); });
     document.addEventListener('dragstart', e => { if (e.target.closest('img,canvas,video')) e.preventDefault(); });
+    // 확대 막기 (두 손가락 확대). 두 번 톡톡 확대는 CSS touch-action으로 막아요. 스크롤은 그대로 돼요
+    ['gesturestart', 'gesturechange', 'gestureend'].forEach(t => document.addEventListener(t, e => e.preventDefault(), { passive: false }));
+    document.addEventListener('touchmove', e => { if (e.touches.length > 1) e.preventDefault(); }, { passive: false });
   </script>
   <script src="pwa.js"></script>
 </body>
