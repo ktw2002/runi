@@ -1773,7 +1773,13 @@ p.abs { white-space: nowrap; }
 .ft-grid { margin-top: 14px; }
 
 /* 앱처럼(홈 화면) 열었을 때는 휴대폰 진짜 상태바가 있으니 화면 속 가짜 9:41 상태바 글자는 숨겨요 */
-@media (display-mode: standalone), (display-mode: fullscreen) { #statusBar { visibility: hidden; } }
+@media (display-mode: standalone), (display-mode: fullscreen) {
+  /* 가짜 시계 · 아이콘만 숨기고, 상태바 자리는 흰 배경으로 남겨서 스크롤한 내용이 비치지 않게 해요 */
+  #statusBar > * { visibility: hidden; }
+  #statusBar.scrolled, #statusBar.with-hdr { background: #fff; }
+}
+/* 위쪽 헤더가 있는 화면은 스크롤해도 상태바 뒤가 비치지 않게 완전히 가려요 */
+.status-bar.with-hdr.scrolled { background: #fff; }
 
 /* 홈 화면에 추가 버튼 · 안내창 */
 .a2hs-btn { left: 101px; top: 52px; width: 200px; height: 32px; border: 0; border-radius: 16px; background: rgba(255,255,255,.92); color: #3b5bdb; font: 600 13px/32px Pretendard, -apple-system, sans-serif; display: flex; align-items: center; justify-content: center; gap: 6px; box-shadow: 0 2px 10px rgba(40,70,160,.18); cursor: pointer; z-index: 5; }
