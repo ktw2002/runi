@@ -14,17 +14,29 @@ function fit() {
   const mobile = w < 520;
   stage.classList.toggle('desktop', !mobile);
   if (mobile) {
-    // 휴대폰: 화면 너비에 꽉 차게
-    const s = w / 402;
+    // 휴대폰: 기본은 화면 너비에 꽉 차게. 화면이 짧은 기기(아이폰 SE 등)는 아래가 잘리지 않게 높이에 맞춰 줄여요
     // 홈 화면 앱으로 열면 휴대폰의 진짜 상태바가 이미 위를 차지하니까, 화면 속 상태바 자리(54px)만큼 위로 올려요
     const app = matchMedia('(display-mode: standalone)').matches || matchMedia('(display-mode: fullscreen)').matches || navigator.standalone === true;
     const off = app ? 54 : 0;
-    phone.style.transform = `translateY(${-off * s}px) scale(${s})`;
-    phone.style.height = `${h / s + off}px`;
+    let s = w / 402;
+    if (h / s + off < 874) {
+      s = h / (874 - off);
+      phone.style.height = '874px';
+    } else {
+      phone.style.height = `${h / s + off}px`;
+    }
+    // 가운데 정렬을 직접 계산해요 (기기마다 어긋나거나 한쪽이 잘리지 않게)
+    phone.style.transformOrigin = '0 0';
+    phone.style.transform = `translate(${(w - 402 * s) / 2}px, ${-off * s}px) scale(${s})`;
+    stage.style.justifyContent = 'flex-start';
     stage.style.paddingTop = '0';
+    stage.style.background = '#fff';
   } else {
     // 컴퓨터: 가운데에 휴대폰 모양으로
     const s = Math.min(1, (h - 40) / 874);
+    phone.style.transformOrigin = '';
+    stage.style.justifyContent = '';
+    stage.style.background = '';
     phone.style.transform = `scale(${s})`;
     phone.style.height = '874px';
     stage.style.paddingTop = '20px';

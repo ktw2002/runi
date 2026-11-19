@@ -34,6 +34,7 @@ img { display: block; }
   overflow: hidden;
   background: #fff;
   transform-origin: top center;
+  flex-shrink: 0;   /* 폭이 좁은 휴대폰에서 화면이 줄어들어 오른쪽이 잘리지 않게 */
 }
 .stage.desktop .phone { border-radius: 44px; box-shadow: 0 20px 60px rgba(30, 50, 120, .25); }
 
