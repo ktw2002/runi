@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Runi - 오늘의 작은 발걸음</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <meta name="robots" content="noindex, nofollow" />
+</head>
+<body>
+  <div class="stage">
+    <div class="phone" id="phone">
+
+      <!-- ============ 1. 스플래시 ============ -->
+      <section class="screen" id="splash" data-auto="intro">
+        <div class="canvas" style="height:874px">
+          <img class="abs cover" src="assets/splash-bg.png" alt="" style="left:-83px;top:0;width:539px;height:958px" />
+          <div class="abs" style="left:-3px;top:-9px;width:413px;height:890px;background:rgba(255,255,255,.2)"></div>
+          <div class="abs crop" style="left:86px;top:223px;width:231px;height:234px;filter:drop-shadow(1px 3px 6px rgba(255,255,255,.8))">
+            <img src="assets/app-icon.png" alt="Runi 앱 아이콘" style="left:-5.76%;top:-7.78%;width:111.61%;height:116.46%" />
+          </div>
+          <div class="abs crop" style="left:45px;top:453px;width:314px;height:122px;filter:drop-shadow(1px 3px 4px rgba(255,255,255,.5))">
+            <img src="assets/logo.png" alt="Runi" style="left:0;top:-66.45%;width:100%;height:234.88%" />
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 2. 온보딩 소개 ============ -->
+      <section class="screen" id="intro">
+        <div class="canvas" style="height:874px">
+          <img class="abs cover" src="assets/intro-bg.png" alt="" style="left:-7px;top:0;width:417px;height:741px" />
+          <div class="abs" style="left:0;top:0;width:402px;height:874px;background:rgba(255,255,255,.1)"></div>
+          <div class="abs" style="left:0;top:357px;width:402px;height:517px;background:linear-gradient(180deg,rgba(255,255,255,0) 0%,#f0f0f0 69.231%)"></div>
+
+          <p class="abs t-bold" style="left:64px;top:97px;font-size:27px;line-height:40px;color:#000">
+            오늘의 작은 발걸음이<br />내일의 <span class="t-xbold blue">큰 변화</span>가 돼요!
+          </p>
+          <p class="abs t-semi" style="left:64px;top:185px;font-size:18px;line-height:27px;color:#505050">
+            Runi와 함께 더 건강한<br />나를 만들어가요!
+          </p>
+
+          <div class="abs" style="left:20px;top:510px;width:362px;height:364px;background:#fff;border-radius:20px 20px 0 0;box-shadow:0 4px 4px rgba(0,0,0,.25)"></div>
+
+          <!-- 옆으로 넘기는 소개 슬라이드 (3페이지) -->
+          <div class="abs intro-slider" id="introSlider">
+            <!-- 1페이지 -->
+            <div class="intro-page">
+              <div class="feat" style="left:68.5px">
+                <span class="circle"><img src="assets/intro-ic1-bg.svg" alt="" /></span>
+                <img class="flip" src="assets/intro-ic1.svg" alt="" style="position:absolute;left:-17.4px;top:18.1px;width:36.3px;height:28px" />
+                <b>기록하고</b><small>나의 러닝을<br />기록하고 성장해요</small>
+              </div>
+              <div class="feat" style="left:186px">
+                <span class="circle"><img src="assets/intro-ic2-bg.svg" alt="" /></span>
+                <img src="assets/intro-ic2.svg" alt="" style="position:absolute;left:-17.74px;top:15.47px;width:36.82px;height:32.59px" />
+                <i style="left:-8.42px;top:16.36px;width:18.19px;height:2.22px;background:#fdae0d;border-radius:6.79px 6.79px 20.37px 20.37px"></i>
+                <b>도전하고</b><small>챌린지로<br />목표를 달성해요</small>
+              </div>
+              <div class="feat" style="left:298px">
+                <span class="circle"><img src="assets/intro-ic3-bg.svg" alt="" /></span>
+                <img src="assets/intro-ic3.svg" alt="" style="position:absolute;left:-15.53px;top:17.68px;width:30.97px;height:26.92px" />
+                <b>나누고</b><small>커뮤니티와 함께<br />성장해요</small>
+              </div>
+            </div>
+            <!-- 2페이지 -->
+            <div class="intro-page">
+              <div class="feat" style="left:68.5px">
+                <span class="circle"><img src="assets/intro-ic1-bg.svg" alt="" /></span>
+                <span class="crop" style="left:-12.7px;top:13.9px;width:25.4px;height:35.2px"><img src="assets/goal-icons.png" alt="" style="left:-33.89%;top:-36.2%;width:441.02%;height:269.87%" /></span>
+                <b>목표 세우고</b><small>나에게 맞는<br />목표를 정해요</small>
+              </div>
+              <div class="feat" style="left:186px">
+                <span class="circle"><img src="assets/intro-ic2-bg.svg" alt="" /></span>
+                <span class="crop" style="left:-19.8px;top:14.45px;width:39.6px;height:34.1px"><img src="assets/goal-icons.png" alt="" style="left:-172.58%;top:-246.37%;width:445.83%;height:440.46%" /></span>
+                <b>기록 깨고</b><small>어제의 나보다<br />한 걸음 더 달려요</small>
+              </div>
+              <div class="feat" style="left:298px">
+                <span class="circle"><img src="assets/intro-ic3-bg.svg" alt="" /></span>
+                <span class="crop" style="left:-15.5px;top:13.5px;width:31px;height:36px"><img src="assets/goal-icons.png" alt="" style="left:-55.85%;top:-228.2%;width:557.61%;height:408.49%" /></span>
+                <b>메달 받고</b><small>달성할 때마다<br />메달을 모아요</small>
+              </div>
+            </div>
+            <!-- 3페이지 -->
+            <div class="intro-page">
+              <div class="feat" style="left:68.5px">
+                <span class="circle"><img src="assets/intro-ic1-bg.svg" alt="" /></span>
+                <img src="assets/coin.png" alt="" style="position:absolute;left:-16.5px;top:14.1px;width:33px;height:34.8px;object-fit:cover" />
+                <b>코인 모으고</b><small>달린 만큼<br />코인이 쌓여요</small>
+              </div>
+              <div class="feat" style="left:186px">
+                <span class="circle"><img src="assets/intro-ic2-bg.svg" alt="" /></span>
+                <span class="crop" style="left:-12px;top:13.5px;width:24px;height:36px"><img src="assets/goal-icons.png" alt="" style="left:-395.12%;top:-48.19%;width:551.81%;height:312.96%" /></span>
+                <b>체력 기르고</b><small>꾸준한 러닝으로<br />체력을 길러요</small>
+              </div>
+              <div class="feat" style="left:298px">
+                <span class="circle"><img src="assets/intro-ic3-bg.svg" alt="" /></span>
+                <img src="assets/egg.png" alt="" style="position:absolute;left:-21px;top:10.5px;width:42px;height:42px;object-fit:cover" />
+                <b>함께 크고</b><small>루니와 함께<br />매일 성장해요</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="abs intro-dots" id="introDots" style="left:175px;top:722px">
+            <button class="on" aria-label="1페이지"></button><button aria-label="2페이지"></button><button aria-label="3페이지"></button>
+          </div>
+
+          <button class="abs btn-primary" data-go="login" style="left:38px;top:763px;width:325px;height:59.58px;font-size:23px">시작하기</button>
+        </div>
+      </section>
+
+      <!-- ============ 3. 로그인 ============ -->
+      <section class="screen" id="login">
+        <div class="canvas" style="height:874px">
+          <div class="abs" style="left:0;top:0;width:402px;height:437px;background:#f2f6ff"></div>
+          <img class="abs" src="assets/confetti-r.svg" alt="" style="left:257px;top:194px;width:93.22px;height:139.09px" />
+          <img class="abs" src="assets/confetti-l.svg" alt="" style="left:46px;top:202px;width:96.1px;height:129.2px" />
+          <img class="abs cover" src="assets/login-char.png" alt="손을 흔드는 루니" style="left:73px;top:122px;width:246px;height:268px" />
+          <p class="abs t-semi center-x" style="left:201px;top:99px;font-size:20px;line-height:40px">만나서 반가워요!</p>
+          <p class="abs t-medium center-x" style="left:201px;top:139px;font-size:14px;line-height:27px;color:#505050">로그인하고 Runi 함께 달려봐요</p>
+
+          <div class="abs" style="left:2px;top:342px;width:402px;height:532px;background:#fff;border-radius:20px 20px 0 0;box-shadow:0 -3px 8px rgba(0,0,0,.1)"></div>
+
+          <!-- 이메일 -->
+          <label class="abs field-login" style="left:39px;top:364px">
+            <img src="assets/ic-mail.svg" alt="" style="left:15px;top:17px;width:20px;height:17px" />
+            <input type="email" placeholder="이메일 주소를 입력해주세요" autocomplete="email" />
+          </label>
+          <!-- 비밀번호 -->
+          <label class="abs field-login" style="left:38px;top:423px">
+            <img src="assets/ic-lock.svg" alt="" style="left:16.15px;top:12.15px;width:19.7px;height:24.2px" />
+            <input type="password" id="pw" placeholder="비밀번호를 입력해주세요" autocomplete="current-password" />
+            <button type="button" class="eye" id="pwToggle" aria-label="비밀번호 보기" style="left:289.25px;top:17.15px;width:19.08px;height:17.2px">
+              <img src="assets/ic-eye.svg" alt="" />
+            </button>
+          </label>
+
+          <!-- 로그인 상태 유지 -->
+          <button type="button" class="abs keep on" id="keep" style="left:43px;top:488px">
+            <span class="box"><img src="assets/check.svg" alt="" /></span>
+            <span class="t-semi" style="font-size:14px;line-height:22px;color:#6189ff">로그인 상태 유지</span>
+          </button>
+          <button type="button" class="abs link t-semi" data-go="findpw" style="left:297px;top:488px;font-size:12px;line-height:22px;color:#90a2d6">비밀번호 찾기</button>
+
+          <button class="abs btn-primary" data-go="goal" style="left:39px;top:524px;width:325px;height:59.58px;font-size:23px">로그인</button>
+
+          <img class="abs" src="assets/line-l.svg" alt="" style="left:38.26px;top:607.83px;width:125.49px;height:1.5px" />
+          <img class="abs" src="assets/line-r.svg" alt="" style="left:237.24px;top:607.83px;width:127.51px;height:1.5px" />
+          <p class="abs t-semi" style="left:188px;top:597.58px;font-size:14px;line-height:22px;color:#9c9c9c">또는</p>
+
+          <button class="abs btn-social" data-sheet="apple" style="left:38px;top:634px">
+            <img src="assets/apple.png" alt="" style="left:15.6px;top:12px;width:20.89px;height:20.89px" />
+            <span>Apple로 로그인</span>
+          </button>
+          <button class="abs btn-social" data-sheet="google" style="left:38px;top:687px">
+            <img src="assets/google.png" alt="" style="left:17.46px;top:13px;width:17.22px;height:17.59px" />
+            <span>Google로 로그인</span>
+          </button>
+          <button class="abs btn-social" data-sheet="kakao" style="left:38px;top:738px">
+            <img src="assets/kakao.png" alt="" style="left:17px;top:12.96px;width:17.53px;height:17.57px" />
+            <i style="left:20.64px;top:19.12px;width:10.27px;height:4.11px;background:#371c1d"></i>
+            <span>카카오로 로그인</span>
+          </button>
+
+          <p class="abs t-semi" style="left:121px;top:804.58px;font-size:14px;line-height:22px">
+            계정이 없으신가요? <button type="button" class="link blue t-semi" data-go="signup">회원가입</button>
+          </p>
+          <!-- 간편 로그인 확인 창 -->
+          <div class="sheet-wrap" id="sheet" aria-hidden="true">
+            <div class="sheet-backdrop" data-sheet-close></div>
+            <div class="sheet" role="dialog" aria-labelledby="sheetTitle">
+              <span class="sheet-handle"></span>
+              <span class="sheet-logo"><img id="sheetLogo" src="assets/apple.png" alt="" /></span>
+              <p class="sheet-title t-bold" id="sheetTitle">Apple로 계속하기</p>
+              <p class="sheet-desc t-medium">Runi가 이름과 이메일 주소를 사용해<br />계정을 만들어요.</p>
+              <div class="sheet-account">
+                <img src="assets/avatar.png" alt="" />
+                <div><b class="t-bold">숨참혜성</b><small class="t-medium">데모 계정</small></div>
+                <span class="sheet-check"><img src="assets/check.svg" alt="" /></span>
+              </div>
+              <button class="btn-primary sheet-ok" id="sheetOk">계속하기</button>
+              <button class="sheet-cancel t-semi" data-sheet-close>취소</button>
+              <p class="sheet-note t-medium">프로토타입 화면이라 실제 로그인은 되지 않아요</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 3-1. 회원가입 ============ -->
+      <section class="screen" id="signup">
+        <div class="canvas" style="height:874px">
+          <div class="abs" style="left:0;top:0;width:402px;height:230px;background:#f2f6ff"></div>
+          <button class="abs back" data-back aria-label="뒤로가기" style="left:24px;top:72.4px;width:10.2px;height:16px">
+            <span class="rot-90" style="width:16px;height:10.2px"><img src="assets/back-goal.svg" alt="" style="left:-1.25px;top:-0.7px;width:18.5px;height:12.15px" /></span>
+          </button>
+          <p class="abs t-semi center-x" style="left:201px;top:64px;font-size:17px;line-height:26px">회원가입</p>
+
+          <p class="abs t-bold" style="left:38px;top:118px;font-size:25px;line-height:35px">Runi와 함께 달릴<br />준비 되셨나요?</p>
+          <p class="abs t-medium" style="left:38px;top:190px;font-size:14px;line-height:22px;color:#505050">이메일로 간편하게 가입할 수 있어요</p>
+          <img class="abs" src="assets/login-char.png" alt="" style="left:262px;top:96px;width:112px;height:122px;object-fit:cover" />
+
+          <div class="abs" style="left:0;top:230px;width:402px;height:644px;background:#fff;border-radius:20px 20px 0 0;box-shadow:0 -3px 8px rgba(0,0,0,.06)"></div>
+
+          <label class="abs field-login" style="left:38px;top:254px">
+            <img src="assets/ic-mail.svg" alt="" style="left:15px;top:17px;width:20px;height:17px" />
+            <input type="email" id="suEmail" placeholder="이메일 주소" autocomplete="email" />
+          </label>
+          <label class="abs field-login" style="left:38px;top:317px">
+            <img src="assets/ic-name.png" alt="" style="left:9px;top:8px;width:33px;height:33px;object-fit:cover" />
+            <input type="text" id="suNick" placeholder="닉네임 (2자 이상)" maxlength="12" />
+          </label>
+          <label class="abs field-login" style="left:38px;top:380px">
+            <img src="assets/ic-lock.svg" alt="" style="left:16.15px;top:12.15px;width:19.7px;height:24.2px" />
+            <input type="password" id="suPw" placeholder="비밀번호 (8자 이상)" autocomplete="new-password" />
+          </label>
+          <label class="abs field-login" style="left:38px;top:443px">
+            <img src="assets/ic-lock.svg" alt="" style="left:16.15px;top:12.15px;width:19.7px;height:24.2px" />
+            <input type="password" id="suPw2" placeholder="비밀번호 확인" autocomplete="new-password" />
+          </label>
+          <p class="abs t-semi" id="suHint" style="left:46px;top:498px;font-size:12px;line-height:20px;color:#90a2d6">영문, 숫자를 섞어 8자 이상 입력해주세요</p>
+
+          <div class="abs terms" id="terms" style="left:38px;top:532px">
+            <button type="button" class="term all" data-term="all"><span class="box"><img src="assets/check.svg" alt="" /></span><b>약관 전체 동의</b></button>
+            <i class="terms-line"></i>
+            <button type="button" class="term" data-term="req"><span class="box"><img src="assets/check.svg" alt="" /></span><span><em>[필수]</em> 서비스 이용약관 동의</span></button>
+            <button type="button" class="term" data-term="req"><span class="box"><img src="assets/check.svg" alt="" /></span><span><em>[필수]</em> 개인정보 수집·이용 동의</span></button>
+            <button type="button" class="term" data-term="opt"><span class="box"><img src="assets/check.svg" alt="" /></span><span><em class="opt">[선택]</em> 이벤트·혜택 알림 받기</span></button>
+          </div>
+
+          <button class="abs btn-primary" id="signupBtn" disabled style="left:38px;top:740px;width:325px;height:59.58px;font-size:21px">가입하고 시작하기</button>
+          <p class="abs t-semi center-x" style="left:201px;top:812px;font-size:14px;line-height:22px">
+            이미 계정이 있으신가요? <button type="button" class="link blue t-semi" data-back>로그인</button>
+          </p>
+        </div>
+      </section>
+
+      <!-- ============ 3-2. 비밀번호 찾기 ============ -->
+      <section class="screen" id="findpw">
+        <div class="canvas" style="height:874px">
+          <div class="abs" style="left:0;top:0;width:402px;height:230px;background:#f2f6ff"></div>
+          <button class="abs back" id="fpBack" aria-label="뒤로가기" style="left:24px;top:72.4px;width:10.2px;height:16px">
+            <span class="rot-90" style="width:16px;height:10.2px"><img src="assets/back-goal.svg" alt="" style="left:-1.25px;top:-0.7px;width:18.5px;height:12.15px" /></span>
+          </button>
+          <p class="abs t-semi center-x" style="left:201px;top:64px;font-size:17px;line-height:26px">비밀번호 찾기</p>
+          <div class="abs fp-dots" id="fpDots" style="left:177px;top:96px"><i class="on"></i><i></i><i></i></div>
+          <img class="abs" src="assets/login-char.png" alt="" style="left:262px;top:106px;width:112px;height:122px;object-fit:cover" />
+          <div class="abs" style="left:0;top:230px;width:402px;height:644px;background:#fff;border-radius:20px 20px 0 0;box-shadow:0 -3px 8px rgba(0,0,0,.06)"></div>
+
+          <!-- 1단계: 이메일 -->
+          <div class="fp-step on" data-step="1">
+            <p class="abs t-bold" style="left:38px;top:122px;font-size:25px;line-height:35px">비밀번호를<br />잊으셨나요?</p>
+            <p class="abs t-medium" style="left:38px;top:194px;font-size:14px;line-height:22px;color:#505050">가입한 이메일로 인증번호를 보내요</p>
+            <label class="abs field-login" style="left:38px;top:262px">
+              <img src="assets/ic-mail.svg" alt="" style="left:15px;top:17px;width:20px;height:17px" />
+              <input type="email" id="fpEmail" placeholder="가입한 이메일 주소" autocomplete="email" />
+            </label>
+            <p class="abs t-semi" style="left:46px;top:318px;font-size:12px;line-height:20px;color:#90a2d6">메일이 오지 않으면 스팸함도 확인해주세요</p>
+            <button class="abs btn-primary" id="fpSend" disabled style="left:38px;top:740px;width:325px;height:59.58px;font-size:21px">인증번호 받기</button>
+          </div>
+
+          <!-- 2단계: 인증번호 -->
+          <div class="fp-step" data-step="2">
+            <p class="abs t-bold" style="left:38px;top:122px;font-size:25px;line-height:35px">인증번호를<br />입력해주세요</p>
+            <p class="abs t-medium" style="left:38px;top:194px;font-size:14px;line-height:22px;color:#505050"><span id="fpEmailShow" class="t-bold blue"></span>로 보냈어요</p>
+            <div class="abs fp-code" id="fpCode" style="left:38px;top:262px">
+              <input inputmode="numeric" maxlength="1" aria-label="인증번호 1번째" /><input inputmode="numeric" maxlength="1" aria-label="인증번호 2번째" /><input inputmode="numeric" maxlength="1" aria-label="인증번호 3번째" /><input inputmode="numeric" maxlength="1" aria-label="인증번호 4번째" /><input inputmode="numeric" maxlength="1" aria-label="인증번호 5번째" /><input inputmode="numeric" maxlength="1" aria-label="인증번호 6번째" />
+            </div>
+            <p class="abs t-semi" style="left:40px;top:336px;font-size:13px;line-height:22px;color:#6e6e6e">남은 시간 <span id="fpTimer" class="blue">03:00</span></p>
+            <button type="button" class="abs t-semi" id="fpResend" style="left:290px;top:336px;font-size:13px;line-height:22px;color:#90a2d6;text-decoration:underline">다시 보내기</button>
+            <p class="abs t-medium" style="left:40px;top:372px;font-size:12px;line-height:20px;color:#b5b5c3">프로토타입이라 아무 숫자 6자리나 입력하면 돼요</p>
+            <button class="abs btn-primary" id="fpVerify" disabled style="left:38px;top:740px;width:325px;height:59.58px;font-size:21px">확인</button>
+          </div>
+
+          <!-- 3단계: 새 비밀번호 -->
+          <div class="fp-step" data-step="3">
+            <p class="abs t-bold" style="left:38px;top:122px;font-size:25px;line-height:35px">새 비밀번호를<br />만들어주세요</p>
+            <p class="abs t-medium" style="left:38px;top:194px;font-size:14px;line-height:22px;color:#505050">이전과 다른 비밀번호를 추천해요</p>
+            <label class="abs field-login" style="left:38px;top:262px">
+              <img src="assets/ic-lock.svg" alt="" style="left:16.15px;top:12.15px;width:19.7px;height:24.2px" />
+              <input type="password" id="fpPw" placeholder="새 비밀번호 (8자 이상)" autocomplete="new-password" />
+            </label>
+            <label class="abs field-login" style="left:38px;top:325px">
+              <img src="assets/ic-lock.svg" alt="" style="left:16.15px;top:12.15px;width:19.7px;height:24.2px" />
+              <input type="password" id="fpPw2" placeholder="새 비밀번호 확인" autocomplete="new-password" />
+            </label>
+            <p class="abs t-semi" id="fpHint" style="left:46px;top:381px;font-size:12px;line-height:20px;color:#90a2d6">영문, 숫자를 섞어 8자 이상 입력해주세요</p>
+            <button class="abs btn-primary" id="fpDone" disabled style="left:38px;top:740px;width:325px;height:59.58px;font-size:21px">비밀번호 변경하기</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 4. 목표 설정 ============ -->
+      <section class="screen" id="goal">
+        <div class="canvas" id="goalCanvas" style="height:1156px">
+          <button class="abs back" data-back aria-label="뒤로가기" style="left:24px;top:72.4px;width:10.2px;height:16px">
+            <span class="rot-90" style="width:16px;height:10.2px"><img src="assets/back-goal.svg" alt="" style="left:-1.25px;top:-0.7px;width:18.5px;height:12.15px" /></span>
+          </button>
+          <img class="abs" src="assets/steps1.svg" alt="1단계" style="left:161px;top:89px;width:79.03px;height:9.03px" />
+
+          <p class="abs t-bold center-x" style="left:200.5px;top:147px;font-size:25px;line-height:35px;text-align:center">어떤 목표를 가지고<br />달려볼까요?</p>
+          <p class="abs t-medium" style="left:85px;top:225px;font-size:14px;line-height:27px;color:#505050">목표를 설정하면 더 즐겁게 달릴 수 있어요!</p>
+          <img class="abs" src="assets/divider.svg" alt="" style="left:38px;top:279.25px;width:326.5px;height:1.5px" />
+
+          <p class="abs t-bold" style="left:38px;top:305px;font-size:16px;line-height:22px">나의 목표 유형 선택</p>
+
+          <div class="goal-types" id="goalTypes">
+            <button class="abs goal-card" style="left:38px;top:341px">
+              <span class="crop" style="left:32px;top:11px;width:39px;height:54.22px"><img src="assets/goal-icons.png" alt="" style="left:-33.89%;top:-36.2%;width:441.02%;height:269.87%" /></span>
+              <b style="top:71px">거리 목표</b><small style="top:97px">정해진 거리를<br />달성하고 싶어요</small>
+            </button>
+            <button class="abs goal-card" style="left:149px;top:341px">
+              <span class="crop" style="left:35px;top:16px;width:33px;height:43.42px"><img src="assets/goal-icons.png" alt="" style="left:-218.98%;top:-58.11%;width:521.91%;height:337.44%" /></span>
+              <b style="top:71px">시간 목표</b><small style="top:97px">정해진 시간 동안<br />달리고 싶어요</small>
+            </button>
+            <button class="abs goal-card" style="left:260px;top:341px">
+              <span class="crop" style="left:36px;top:13px;width:30.67px;height:46px"><img src="assets/goal-icons.png" alt="" style="left:-395.12%;top:-48.19%;width:551.81%;height:312.96%" /></span>
+              <b style="top:71px">체력/건강</b><small style="top:97px">건강한 습관과 체중을<br />관리하고 싶어요</small>
+            </button>
+            <button class="abs goal-card" style="left:38px;top:499px">
+              <span class="crop" style="left:35px;top:23px;width:31px;height:36px"><img src="assets/goal-icons.png" alt="" style="left:-55.85%;top:-228.2%;width:557.61%;height:408.49%" /></span>
+              <b style="top:72px">대회 준비</b><small style="top:98px">대회로 체계적으로<br />준비할게요</small>
+            </button>
+            <button class="abs goal-card" style="left:149px;top:499px">
+              <span class="crop" style="left:34px;top:23px;width:36px;height:31px"><img src="assets/goal-icons.png" alt="" style="left:-172.58%;top:-246.37%;width:445.83%;height:440.46%" /></span>
+              <b style="top:72px">기록 향상</b><small style="top:98px">나의 기록을<br />향상시키고 싶어요</small>
+            </button>
+            <button class="abs goal-card" style="left:260px;top:499px">
+              <span class="crop" style="left:33px;top:19px;width:37.85px;height:36px"><img src="assets/goal-icons.png" alt="" style="left:-303.07%;top:-212.2%;width:435.58%;height:389.57%" /></span>
+              <b style="top:72px">건강 유지</b><small style="top:98px">꾸준한 운동으로<br />건강을 유지할게요</small>
+            </button>
+          </div>
+
+          <img class="abs" src="assets/divider.svg" alt="" style="left:38px;top:673.25px;width:326.5px;height:1.5px" />
+          <p class="abs t-bold" style="left:38px;top:699px;font-size:16px;line-height:22px">목표 설정하기</p>
+
+          <!-- 목표 거리 -->
+          <div class="abs dist-bg" id="distBg" style="left:38px;top:735px;width:325px"></div>
+          <img class="abs" src="assets/pin.png" alt="" style="left:51px;top:751px;width:17.63px;height:23.28px;object-fit:fill;object-position:bottom" />
+          <p class="abs t-bold" style="left:76.63px;top:752px;font-size:14px;line-height:22px">목표 거리</p>
+          <p class="abs t-bold" style="left:261px;top:752px;line-height:22px">
+            <span class="t-xbold" id="distValue" style="font-size:18px">10.0</span> <span class="t-semi" style="font-size:14px">km</span>
+          </p>
+          <button type="button" class="abs dist-toggle" id="distToggle" aria-expanded="false" aria-label="목표 거리 자세히 조절" style="left:38px;top:735px;width:325px;height:48px"></button>
+          <span class="abs chev-right" id="distChev" style="left:338px;top:761px;width:6.3px;height:9.8px"><span style="width:9.8px;height:6.3px"><img src="assets/chevron.svg" alt="" style="left:-0.74px;top:-0.4px;width:11.3px;height:7.5px" /></span></span>
+
+          <div class="dist" id="dist">
+            <img class="abs" src="assets/tick.svg" alt="" style="left:55.45px;top:789.45px;width:1.1px;height:9.1px" />
+            <img class="abs" src="assets/tick.svg" alt="" style="left:127.45px;top:789.45px;width:1.1px;height:9.1px" />
+            <img class="abs" src="assets/tick.svg" alt="" style="left:199.45px;top:789.45px;width:1.1px;height:9.1px" />
+            <img class="abs" src="assets/tick.svg" alt="" style="left:271.45px;top:789.45px;width:1.1px;height:9.1px" />
+            <img class="abs" src="assets/tick.svg" alt="" style="left:343.45px;top:789.45px;width:1.1px;height:9.1px" />
+            <img class="abs" src="assets/track.svg" alt="" style="left:61.5px;top:791.5px;width:29px;height:5px" />
+            <img class="abs" src="assets/track.svg" alt="" style="left:93.5px;top:791.5px;width:29px;height:5px" />
+            <img class="abs" src="assets/track.svg" alt="" style="left:133.5px;top:791.5px;width:29px;height:5px" />
+            <img class="abs" src="assets/track.svg" alt="" style="left:165.5px;top:791.5px;width:29px;height:5px" />
+            <img class="abs" src="assets/track.svg" alt="" style="left:205.5px;top:791.5px;width:29px;height:5px" />
+            <img class="abs" src="assets/track.svg" alt="" style="left:237.5px;top:791.5px;width:29px;height:5px" />
+            <img class="abs" src="assets/track.svg" alt="" style="left:277.5px;top:791.5px;width:29px;height:5px" />
+            <img class="abs" src="assets/track.svg" alt="" style="left:309.5px;top:791.5px;width:29px;height:5px" />
+            <div class="abs" id="distFill" style="left:53px;top:791px;width:76px;height:6px;background:#5a83f8;border-radius:30px"></div>
+            <img class="abs" id="distKnob" src="assets/knob.svg" alt="" style="left:118px;top:783px;width:21px;height:21px" />
+            <div class="abs dist-hit" id="distHit" role="slider" tabindex="0" aria-label="목표 거리" aria-valuemin="5" aria-valuemax="25" aria-valuenow="10" style="left:44px;top:776px;width:312px;height:30px"></div>
+            <button class="abs dist-label" data-km="5" data-x="56" style="left:48px;top:802px"><b>5 </b>km</button>
+            <button class="abs dist-label" data-km="10" data-x="128" style="left:116px;top:802px"><b>10 </b>km</button>
+            <button class="abs dist-label" data-km="15" data-x="200" style="left:188px;top:802px"><b>15 </b>km</button>
+            <button class="abs dist-label" data-km="20" data-x="272" style="left:261px;top:802px"><b>20 </b>km</button>
+            <button class="abs dist-label" data-km="25" data-x="344" style="left:324px;top:802px"><b>25 </b>km +</button>
+          </div>
+
+          <!-- 세밀 조절 (화살표를 누르면 펼쳐져요) -->
+          <div class="dist-detail" id="distDetail" aria-hidden="true">
+            <div class="abs fine-hit" id="fineHit" role="slider" tabindex="-1" aria-label="목표 거리 세밀 조절" aria-valuemin="5" aria-valuemax="25" style="left:50px;top:786px;width:302px;height:34px">
+              <i class="fine-track"></i>
+              <i class="fine-fill" id="fineFill"></i>
+              <i class="fine-knob" id="fineKnob"></i>
+            </div>
+            <div class="abs fine-ticks" id="fineTicks" style="left:0;top:822px;width:402px;height:24px"></div>
+            <button type="button" class="abs step-btn" data-step="-0.1" aria-label="0.1km 줄이기" style="left:62px;top:862px">−</button>
+            <label class="abs fine-value" style="left:121px;top:858px;width:160px;height:52px">
+              <input type="text" inputmode="decimal" id="fineInput" class="t-xbold" value="10.0" aria-label="목표 거리 직접 입력" />
+              <span class="t-semi">km</span>
+            </label>
+            <button type="button" class="abs step-btn" data-step="0.1" aria-label="0.1km 늘리기" style="left:296px;top:862px">+</button>
+            <p class="abs t-medium center-x" style="left:201px;top:918px;font-size:12px;line-height:18px;color:#90a2d6">끌거나 −/+ 버튼으로 0.1km씩 조절할 수 있어요</p>
+          </div>
+
+          <div class="goal-below" id="goalBelow">
+          <!-- 달성 기간 -->
+          <label class="abs period-box" style="left:38px;top:849px;width:325px;height:52px">
+            <img src="assets/calendar.svg" alt="" style="left:14px;top:16px;width:17px;height:16.5px" />
+            <span class="t-semi" style="left:64px;top:14px;font-size:14px;line-height:22px;transform:translateX(-50%)">달성 기간</span>
+            <input type="text" id="periodInput" class="t-semi" value="4주 (2026.06.02 ~ 06.29)" placeholder="예: 4주, 한 달, 6월까지" maxlength="30" />
+          </label>
+
+          <!-- 응원 박스 -->
+          <div class="abs" style="left:22px;top:926px;width:358px;height:94px;background:#f4f4fd;border-radius:15px"></div>
+          <img class="abs" src="assets/trophy-bg.svg" alt="" style="left:41px;top:948px;width:49.53px;height:49.53px" />
+          <img class="abs" src="assets/trophy.svg" alt="" style="left:50.29px;top:958.83px;width:31.47px;height:27.86px" />
+          <p class="abs t-bold" style="left:107px;top:950px;font-size:14px;line-height:22px">숨참혜성님이라면 충분히 해낼 수 있어요!</p>
+          <p class="abs t-medium" style="left:107px;top:976px;font-size:12px;line-height:22px">작은 걸음이 큰 변화를 만들어요.</p>
+
+          <button class="abs btn-primary" data-go="info" style="left:38px;top:1045px;width:325px;height:59.58px;font-size:23px">목표 설정 완료</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 5. 기본 정보 입력 ============ -->
+      <section class="screen" id="info">
+        <div class="canvas" style="height:917px">
+          <button class="abs back" data-back aria-label="뒤로가기" style="left:24px;top:89.1px;width:10.2px;height:19.6px">
+            <span class="rot-90" style="width:19.6px;height:10.2px"><img src="assets/back-info.svg" alt="" style="left:-1.25px;top:-0.86px;width:22.1px;height:12.11px" /></span>
+          </button>
+          <img class="abs" src="assets/steps2.svg" alt="2단계" style="left:161px;top:89px;width:79.03px;height:9.03px" />
+
+          <p class="abs t-bold" style="left:73px;top:148.78px;font-size:25px;line-height:35px">기본 정보를 입력해주세요!</p>
+          <p class="abs t-medium" style="left:54px;top:191.78px;font-size:14px;line-height:27px;color:#505050">개인정보를 설정하면 더욱 정확하게 분석 할 수 있어요!</p>
+
+          <img class="abs" src="assets/avatar.png" alt="프로필 사진" style="left:137px;top:243.78px;width:128px;height:129px;object-fit:fill" />
+          <img class="abs avatar-photo" id="avatarPhoto" alt="내 프로필 사진" style="left:143px;top:249.5px;width:118px;height:118px" />
+          <label class="abs avatar-edit" aria-label="프로필 사진 바꾸기" style="left:225px;top:331.78px;width:44px;height:44px">
+            <img src="assets/edit-circle.svg" alt="" style="left:0;top:0;width:44px;height:44px" />
+            <span class="crop" style="left:10.18px;top:8.36px;width:19.64px;height:21.27px"><img src="assets/pencil.png" alt="" style="left:-54.17%;top:-46.15%;width:212.5%;height:196.15%" /></span>
+            <input type="file" id="avatarInput" accept="image/*" hidden />
+          </label>
+
+          <!-- 이름 -->
+          <label class="abs field-info" style="top:397.78px">
+            <img src="assets/ic-name.png" alt="" class="ic" />
+            <span class="lbl" style="left:70px">닉네임</span>
+            <input type="text" id="nickInput" placeholder="닉네임을 입력해주세요." maxlength="12" style="left:128px;width:180px" />
+          </label>
+          <!-- 성별 -->
+          <div class="abs field-info" style="top:472.78px">
+            <img src="assets/ic-gender.png" alt="" class="ic" />
+            <span class="lbl" style="left:66px">성별</span>
+            <div class="gender" id="gender">
+              <button type="button" style="left:115px">여성</button>
+              <button type="button" class="on" style="left:228px">남성</button>
+            </div>
+          </div>
+          <!-- 생년월일 -->
+          <label class="abs field-info" style="top:547.78px">
+            <img src="assets/ic-birth.png" alt="" class="ic" />
+            <span class="lbl" style="left:80.5px">생년월일</span>
+            <input type="text" inputmode="numeric" placeholder="YYYY.MM.DD" maxlength="10" id="birth" style="left:140px;width:150px" />
+            <button type="button" class="cal-open" id="calOpen" aria-label="달력에서 생년월일 고르기" style="left:286px;top:3px;width:48px;height:45px">
+              <img src="assets/chevron-down.svg" alt="" style="position:absolute;left:15.25px;top:18.25px;width:18.5px;height:10.5px;transform:rotate(180deg)" />
+            </button>
+          </label>
+          <!-- 키 -->
+          <label class="abs field-info" style="top:622.78px">
+            <img src="assets/ic-height.png" alt="" class="ic" />
+            <span class="lbl" style="left:81px">키 (선택)</span>
+            <input type="number" inputmode="decimal" placeholder="입력해주세요." style="left:140px;width:150px" />
+            <span class="unit">cm</span>
+          </label>
+          <!-- 몸무게 -->
+          <label class="abs field-info" style="top:697.78px">
+            <img src="assets/ic-weight.png" alt="" class="ic" style="left:2.5px;top:5px;width:44px;height:44px" />
+            <span class="lbl" style="left:96.5px">몸무게 (선택)</span>
+            <input type="number" inputmode="decimal" placeholder="입력해주세요." style="left:172px;width:120px" />
+            <span class="unit">Kg</span>
+          </label>
+
+          <button class="abs btn-primary locked" id="infoNext" data-go="character" style="left:26px;top:776.78px;width:353px;height:59.58px;font-size:21px">다음</button>
+          <p class="abs t-semi nick-hint" id="nickHint">닉네임을 2자 이상 입력해주세요</p>
+          <p class="abs t-medium center-x" style="left:201px;top:844.78px;font-size:12px;line-height:20px;color:#777">기본정보는 마이페이지에서 변경할 수 있어요.</p>
+        </div>
+      </section>
+
+      <!-- ============ 6. 캐릭터 선택 ============ -->
+      <section class="screen" id="character">
+        <div class="canvas" style="height:917px;overflow:hidden">
+          <div class="abs" style="left:0;top:0;width:402px;height:995px;background:linear-gradient(180deg,rgba(255,255,255,0) 0%,#e3e6ff 100%)"></div>
+          <button class="abs back" data-back aria-label="뒤로가기" style="left:24px;top:95.2px;width:10.2px;height:21px">
+            <span class="rot-90" style="width:21px;height:10.2px"><img src="assets/back-char.svg" alt="" style="left:-1.25px;top:-0.9px;width:23.5px;height:12.15px" /></span>
+          </button>
+          <img class="abs" src="assets/steps3.svg" alt="3단계" style="left:161px;top:89px;width:79.03px;height:9.03px" />
+
+          <p class="abs t-semi center-xy" style="left:201.5px;top:177.66px;font-size:25px;line-height:43px">함께할 <span class="t-xbold blue">친구</span>를 선택해주세요!</p>
+          <p class="abs t-medium center-xy" style="left:193.5px;top:207.66px;font-size:14px;line-height:51px;color:#777">선택한 캐릭터는 상점에서 변경할 수 있어요.</p>
+          <img class="abs cover" src="assets/heart-small.png" alt="" style="left:312px;top:198.16px;width:18px;height:18px" />
+
+          <div class="carousel" id="carousel">
+            <!-- 버니 -->
+            <button class="char-card pos-left" data-name="버니" style="background:#fff;border-color:#ff77a8;--c:#ff6fa3">
+              <span class="pick-badge"><img src="assets/check.svg" alt="선택됨" /></span>
+              <img class="abs" src="assets/shadow-pink.svg" alt="" style="left:41px;top:157.6px;width:133.7px;height:46.4px" />
+              <span class="crop" style="left:47.9px;top:13px;width:130.9px;height:184.3px"><img src="assets/characters.png" alt="버니" style="left:-125.4%;top:0;width:340.03%;height:100%" /></span>
+              <b class="nm" style="color:#ff77a8">버니</b>
+              <span class="desc" style="background:#ffeef5;color:#ff77a8">점프력이 뛰어나고,<br />가볍고 빠른 토끼</span>
+              <span class="chip" style="left:37px"><i style="background:#eddeff"></i><span class="crop" style="left:6.5px;top:5px;width:14.29px;height:18px"><img src="assets/trait-icons.png" alt="" style="left:-288.89%;top:-33.46%;width:418.52%;height:249.26%" /></span><em style="color:#9d61f9">민첩함</em></span>
+              <span class="chip" style="left:113.25px"><i style="background:#ffd4e4"></i><span class="crop" style="left:6.75px;top:6px;width:14px;height:14px"><img src="assets/trait-icons.png" alt="" style="left:-25%;top:-128.41%;width:353.12%;height:256.82%" /></span><em style="color:#fd639c">가벼움</em></span>
+            </button>
+            <!-- 루니 -->
+            <button class="char-card pos-center selected" data-name="루니" style="background:#f3f6ff;border-color:#4270f6;--c:#4270f6">
+              <span class="pick-badge"><img src="assets/check.svg" alt="선택됨" /></span>
+              <img class="abs" src="assets/shadow-blue.svg" alt="" style="left:41.57px;top:152.17px;width:133.71px;height:46.39px" />
+              <span class="crop" style="left:26.56px;top:13px;width:163.73px;height:182.84px"><img src="assets/characters.png" alt="루니" style="left:-0.2%;top:0;width:269.12%;height:100%" /></span>
+              <b class="nm" style="color:#4270f6">루니</b>
+              <span class="desc" style="background:#f1f4ff;color:#4270f6">친구 같이 든든하고,<br />언제나 달리는 강아지</span>
+              <span class="chip" style="left:38px"><i style="background:#e5eaff"></i><span class="crop" style="left:2px;top:4px;width:21px;height:16px"><img src="assets/trait-icons.png" alt="" style="left:-10.26%;top:-37.92%;width:289.74%;height:282.5%" /></span><em style="color:#4270f6">활발함</em></span>
+              <span class="chip" style="left:114px"><i style="background:#d9c4f4"></i><span class="crop" style="left:5.3px;top:4px;width:17.44px;height:18px"><img src="assets/trait-icons.png" alt="" style="left:-138.71%;top:-35.55%;width:364.52%;height:264.84%" /></span><em style="color:#ab6efc">친근함</em></span>
+            </button>
+            <!-- 모니 -->
+            <button class="char-card pos-right" data-name="모니" style="background:#fff;border-color:#ffad62;--c:#ff9d45">
+              <span class="pick-badge"><img src="assets/check.svg" alt="선택됨" /></span>
+              <img class="abs" src="assets/shadow-orange.svg" alt="" style="left:44.27px;top:142.7px;width:133.7px;height:46.4px" />
+              <span class="crop" style="left:49.7px;top:24px;width:122.83px;height:158.24px"><img src="assets/characters.png" alt="모니" style="left:-236.06%;top:-12.59%;width:350.52%;height:112.59%" /></span>
+              <b class="nm" style="color:#ffad62">모니</b>
+              <span class="desc" style="background:#fef5ea;color:#ffad62">작지만 빠르고,<br />에너지 넘치는 햄스터</span>
+              <span class="chip" style="left:37px"><i style="background:#ffd5ae"></i><span class="crop" style="left:7px;top:4px;width:13px;height:19px"><img src="assets/trait-icons.png" alt="" style="left:-209.09%;top:-135.55%;width:513.64%;height:264.84%" /></span><em style="color:#fe973f">에너지</em></span>
+              <span class="chip" style="left:113px"><i style="background:#ffcedc"></i><span class="crop" style="left:6.5px;top:8px;width:14.04px;height:13px"><img src="assets/trait-icons.png" alt="" style="left:-288.89%;top:-193.5%;width:418.52%;height:339%" /></span><em style="color:#fe6997">귀여움</em></span>
+            </button>
+          </div>
+
+          <button class="abs btn-primary" data-go="start" style="left:26px;top:777px;width:353px;height:59.58px;font-size:23px">선택하기</button>
+          <p class="abs t-medium center-xy" style="left:201px;top:855px;font-size:12px;line-height:20px;color:#777">캐릭터는 마이페이지에서 변경할 수 있어요.</p>
+        </div>
+      </section>
+
+      <!-- ============ 7. 시작하기 ============ -->
+      <section class="screen" id="start">
+        <div class="canvas" style="height:917px">
+          <img class="abs" src="assets/start-bg.svg" alt="" style="left:0;top:0;width:402px;height:874px" />
+          <button class="abs back" data-back aria-label="뒤로가기" style="left:24px;top:101.5px;width:10.2px;height:22.5px">
+            <img src="assets/back-start.svg" alt="" style="position:absolute;left:-0.94px;top:-1.25px;width:12.39px;height:25px" />
+          </button>
+          <p class="abs t-bold center-x start-color" id="startTitle" style="left:202px;top:102px;font-size:32px;line-height:51px">활발한 루니</p>
+          <p class="abs t-medium center-x" style="left:202px;top:143px;font-size:21px;line-height:51px">새로운 시작</p>
+
+          <div class="abs start-card" style="left:25px;top:233px;width:353px;height:344.95px"></div>
+          <!-- 고른 캐릭터만 보여요 -->
+          <img class="abs cover start-char" data-char="루니" src="assets/runi-wave.png" alt="손을 든 루니" style="left:102.44px;top:247.08px;width:169.84px;height:226.45px" />
+          <span class="abs crop start-char" data-char="버니" style="left:126.4px;top:255px;width:149.2px;height:210px"><img src="assets/characters.png" alt="달리는 버니" style="left:-125.4%;top:0;width:340.03%;height:100%" /></span>
+          <span class="abs crop start-char" data-char="모니" style="left:127.3px;top:272px;width:147.4px;height:190px"><img src="assets/characters.png" alt="달리는 모니" style="left:-236.06%;top:-12.59%;width:350.52%;height:112.59%" /></span>
+          <div class="abs" style="left:68.25px;top:453.25px;width:267.52px;height:111.63px;background:#fcfcfc;border-radius:17.1px"></div>
+          <div class="abs start-dash" style="left:77.3px;top:461.29px;width:249.41px;height:95.54px;border-radius:15.09px"></div>
+          <p class="abs t-semi center-x" style="left:201.78px;top:473.36px;font-size:18.1px;line-height:22.13px;letter-spacing:-1px">캐릭터 탄생</p>
+          <p class="abs t-medium center-x" style="left:201.75px;top:499.51px;font-size:14.08px;line-height:22.13px;letter-spacing:-1px;text-align:center">안녕! 나는 <span id="startHello">루니</span>야!<br />잘 부탁해~</p>
+
+          <div class="abs start-egg" style="left:26px;top:599.95px;width:353px;height:115px;border-radius:20px"></div>
+          <img class="abs cover" src="assets/egg.png" alt="" style="left:30px;top:617.95px;width:80px;height:80px" />
+          <p class="abs t-bold center-x start-color" style="left:221px;top:615.95px;font-size:20px;line-height:51px">작은 가능성이 깨어나는 순간!</p>
+          <p class="abs t-bold center-x" style="left:181px;top:647.95px;font-size:15px;line-height:51px;color:#777690">첫 걸음을 내디 더 보세요.</p>
+
+          <button class="abs btn-primary" data-go="home" data-fade style="left:26px;top:776px;width:353px;height:59.58px;font-size:23px">시작하기</button>
+        </div>
+      </section>
+
+      <!-- ============ 8. 홈 ============ -->
+      <section class="screen" id="home">
+        <div class="canvas" style="height:874px">
+          <img class="abs cover" src="assets/room-empty.jpg" alt="루니의 방" style="left:-2px;top:-24px;width:406px;height:880px" />
+          <!-- 루니 (누르면 손 흔들기 · 꼬리 흔들기 · 깡총!) -->
+          <button type="button" class="abs runi" id="runi" aria-label="루니 쓰다듬기" style="left:133.36px;top:418.41px;width:143.39px;height:185.21px">
+            <img class="runi-tail" src="assets/runi-tail.png" alt="" />
+            <img class="runi-body" src="assets/runi-body.png" alt="" />
+            <img class="runi-arm" src="assets/runi-arm.png" alt="" />
+          </button>
+          <!-- 루니 말풍선 (홈 화면에 들어올 때마다 뿅!) -->
+          <img class="abs home-bubble" id="homeBubble" src="assets/home-bubble.png" alt="루니: 오늘도 같이 달릴래?" style="left:52.92px;top:606.82px;width:289.98px;height:87.06px" />
+          <div class="abs" style="left:0;top:0;width:402px;height:54px;background:#fff"></div>  <!-- 상단 시계바 흰 배경 -->
+
+          <!-- 상단 바 -->
+          <div class="abs topbar">
+            <div class="home-prof">
+              <img id="homeAv" src="assets/profile-hs.jpg" alt="내 프로필 사진" />
+              <b id="homeNick">숨참혜성</b>
+              <small>오늘도 좋은 하루에요!</small>
+            </div>
+            <div class="pill">
+              <img src="assets/coin.png" alt="" style="left:10.3px;top:5px;width:25.4px;height:26.8px" />
+              <span class="t-xbold">406</span>
+            </div>
+            <button class="ic-btn" data-go="f-118-4072" aria-label="알림" style="left:304px;top:17px;width:30px;height:31px">
+              <img src="assets/ic-bell.svg" alt="" style="left:0;top:4.4px;width:25.8px;height:27.1px" />
+              <img src="assets/badge-bell.svg" alt="" style="left:13.6px;top:0;width:16.3px;height:16.3px" />
+              <span class="badge-num" style="left:17.7px;top:3px;font-size:13px;line-height:10.87px">3</span>
+            </button>
+            <button class="ic-btn" data-go="f-1-2966" aria-label="설정" style="left:356px;top:21px;width:24px;height:25px">
+              <img src="assets/ic-gear.svg" alt="" style="left:-0.72px;top:-1px;width:25.44px;height:27px" />
+            </button>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 생년월일 달력 -->
+      <div class="sheet-wrap cal-wrap" id="calSheet" aria-hidden="true">
+        <div class="sheet-backdrop" data-cal-close></div>
+        <div class="cal-panel" role="dialog" aria-labelledby="calTitle">
+          <span class="cal-handle"></span>
+          <p class="cal-title t-bold" id="calTitle">생년월일 선택</p>
+          <div class="cal-head">
+            <button type="button" class="cal-nav" id="calPrev" aria-label="이전 달">‹</button>
+            <select id="calYear" aria-label="연도"></select>
+            <select id="calMonth" aria-label="월"></select>
+            <button type="button" class="cal-nav" id="calNext" aria-label="다음 달">›</button>
+          </div>
+          <div class="cal-week"><span class="sun">일</span><span>월</span><span>화</span><span>수</span><span>목</span><span>금</span><span class="sat">토</span></div>
+          <div class="cal-grid" id="calGrid"></div>
+          <p class="cal-picked t-semi" id="calPicked">날짜를 골라주세요</p>
+          <button type="button" class="btn-primary cal-done" id="calDone" disabled>선택 완료</button>
+        </div>
+      </div>
+
+      <!-- 하단 탭바 (홈·상점·메달·프로필·소통 화면 공통) -->
+      <nav class="abs tabbar" id="tabbar">
+        <img src="assets/tabbar-bg.svg" alt="" style="left:-10px;top:-6px;width:422px;height:119.15px" />
+        <button class="tab" data-tab-go="f-278-3841" style="left:28px;top:28px;width:35.7px;height:31px" aria-label="상점">
+          <img src="assets/tab-shop.svg" alt="" style="left:-0.43px;top:-0.85px;width:36.45px;height:32.7px" />
+          <i style="left:10px;top:19px;width:11px;height:7px;border:1.7px solid #000;border-radius:1.17px"></i>
+        </button>
+        <button class="tab" data-tab-go="f-1-1041" style="left:101.9px;top:19px;width:31px;height:43px" aria-label="메달">
+          <img src="assets/tab-medal.svg" alt="" style="left:-0.85px;top:6.15px;width:22.9px;height:36.85px" />
+          <img src="assets/badge-medal.svg" alt="" style="left:13px;top:2px;width:18px;height:18px" />
+          <span class="badge-num" style="left:17.9px;top:0;width:8px;font-size:12px;line-height:22px">2</span>
+        </button>
+        <button class="tab" id="tabCenter" style="left:172px;top:0;width:56.9px;height:57px" aria-label="홈 · 러닝 시작">
+          <img src="assets/tab-home-bg.svg" alt="" style="left:-4px;top:-2px;width:64.9px;height:65px" />
+          <img src="assets/tab-home-shoe.svg" alt="" style="left:9.27px;top:14.27px;width:37.35px;height:28.75px" />
+        </button>
+        <button class="tab" data-tab-go="f-67-1562" style="left:274px;top:25px;width:27px;height:34.3px" aria-label="프로필">
+          <img src="assets/tab-profile.svg" alt="" style="left:0;top:0;width:100%;height:100%" />
+        </button>
+        <button class="tab" data-tab-go="f-136-1566" style="left:339px;top:25px;width:40px;height:32.8px" aria-label="소통">
+          <img src="assets/tab-chat.svg" alt="" style="left:0;top:0;width:100%;height:100%" />
+        </button>
+        <span class="tab-label" style="left:37px">상점</span>
+        <span class="tab-label" style="left:105px">메달</span>
+        <span class="tab-label" style="left:196px">홈</span>
+        <span class="tab-label" style="left:274px">프로필</span>
+        <span class="tab-label" style="left:350px">소통</span>
+      </nav>
+
+      <!-- 상단 상태바 · 하단 홈 바 (모든 화면 공통, 스크롤해도 고정) -->
+      <div class="status-bar" id="statusBar"></div>
+      <div class="home-indicator" id="homeIndicator"></div>
+
+      <div class="toast" id="toast" role="status"></div>
+    </div>
+  </div>
+
+  <!-- 탭 아이콘 색 바꾸기: 검은 선 → 파란 선, 흰 바탕은 흰색 그대로 -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <filter id="toBlue" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="0.1576 0.5301 0.0535 0 0.2588 0.1192 0.4011 0.0405 0 0.4392 0.0075 0.0252 0.0025 0 0.9647 0 0 0 1 0"/></filter>
+  </svg>
+  <template id="statusBarTpl">
+    <span class="time">9:41</span>
+    <svg class="sb-icons" width="78" height="13" viewBox="0 0 78 13" aria-hidden="true">
+      <rect x="0" y="8.5" width="3.2" height="4" rx="0.8" fill="#000"/>
+      <rect x="4.8" y="6.3" width="3.2" height="6.2" rx="0.8" fill="#000"/>
+      <rect x="9.6" y="3.8" width="3.2" height="8.7" rx="0.8" fill="#000"/>
+      <rect x="14.4" y="1" width="3.2" height="11.5" rx="0.8" fill="#000"/>
+      <path d="M31 3.2c2.6 0 5 1 6.8 2.7l1.2-1.2C36.9 2.6 34.1 1.4 31 1.4s-5.9 1.2-8 3.3l1.2 1.2C26 4.2 28.4 3.2 31 3.2zm0 3.4c1.6 0 3.1.6 4.3 1.7l1.2-1.2c-1.5-1.4-3.4-2.2-5.5-2.2s-4 .8-5.5 2.2l1.2 1.2c1.2-1.1 2.7-1.7 4.3-1.7zm0 3.3c.7 0 1.3.3 1.8.7L31 12.4l-1.8-1.8c.5-.4 1.1-.7 1.8-.7z" fill="#000"/>
+      <rect x="47.5" y="0.5" width="25" height="12" rx="3.8" fill="none" stroke="#000" stroke-opacity=".35"/>
+      <rect x="49.5" y="2.5" width="21" height="8" rx="2.3" fill="#000"/>
+      <path d="M74 4.5v4c.8-.3 1.3-1.1 1.3-2s-.5-1.7-1.3-2z" fill="#000" fill-opacity=".4"/>
+    </svg>
+  </template>
+
+  <script src="flows.js"></script>
+  <script src="script.js"></script>
+  <script src="community.js"></script>
+  <script src="rooms.js"></script>
+  <script src="closet.js"></script>
+  <script>
+    // 그림 저장 막기 (우클릭 · 길게 누르기 메뉴 · 끌어다 놓기)
+    document.addEventListener('contextmenu', e => { if (!e.target.closest('input,textarea')) e.preventDefault(); });
+    document.addEventListener('dragstart', e => { if (e.target.closest('img,canvas,video')) e.preventDefault(); });
+  </script>
+</body>
+</html>
