@@ -1771,3 +1771,6 @@ p.abs { white-space: nowrap; }
 .ft-scroll { flex: 1; min-height: 0; overflow-y: auto; -webkit-overflow-scrolling: touch; overscroll-behavior: contain; padding-bottom: 28px; scrollbar-width: none; }
 .ft-scroll::-webkit-scrollbar { display: none; }
 .ft-grid { margin-top: 14px; }
+
+/* 앱처럼(홈 화면) 열었을 때는 휴대폰 진짜 상태바가 있으니 화면 속 가짜 9:41 상태바 글자는 숨겨요 */
+@media (display-mode: standalone), (display-mode: fullscreen) { #statusBar { visibility: hidden; } }
