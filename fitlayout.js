@@ -40,6 +40,7 @@
       pin(sec);
     });
   }
+  window.runiLayout = layout;
   const pinned = new Map();
   function pin(sec) {
     const p = pinned.get(sec); if (!p) return;

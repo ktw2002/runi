@@ -715,7 +715,7 @@
   go = function (id, mode) { if (id === 'f-125-4436') { openNoti(NOTI[0]); return; } return _go2(id, mode); };
 
   /* =========================================================
-     30초 동안 앱을 쓰면 혜성에게서 메시지가 와요 (졸업전시 인사)
+     온보딩을 마치고 홈에 도착하면 혜성에게서 메시지가 와요 (졸업전시 인사)
      ========================================================= */
   (function thanksMessage() {
     const HS_AV = 'assets/profile-hs.jpg';
@@ -748,12 +748,14 @@
       try { navigator.vibrate && navigator.vibrate(80); } catch (e) {}
       hideTimer = setTimeout(hide, 7000);
     }
-    // 화면을 보고 있는 시간만 세요
-    let used = 0;
-    const tick = setInterval(() => {
-      if (document.visibilityState !== 'visible') return;
-      if (++used >= 30) { clearInterval(tick); arrive(); }
-    }, 1000);
+    // 온보딩을 마치고 홈 화면에 처음 도착하면 메시지가 와요
+    let sent = false;
+    const _goHome = go;
+    go = function (id, mode) {
+      const r = _goHome(id, mode);
+      if (id === 'home' && !sent) { sent = true; setTimeout(arrive, 1500); }
+      return r;
+    };
   })();
 
   /* =========================================================

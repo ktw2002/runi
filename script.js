@@ -10,7 +10,10 @@ let current = null;
 
 /* ---------- 화면 크기 맞추기 ---------- */
 function fit() {
-  const w = window.innerWidth, h = window.innerHeight;
+  // 실제로 보이는 높이: 브라우저 아래 도구막대·카카오톡 하단바 등에 가려지는 부분은 빼고 계산해요
+  const vv = window.visualViewport;
+  const w = window.innerWidth;
+  const h = Math.min(window.innerHeight, document.documentElement.clientHeight || 1e9, vv ? vv.height : 1e9, svh());
   const mobile = w < 520;
   stage.classList.toggle('desktop', !mobile);
   if (mobile) {
@@ -20,6 +23,7 @@ function fit() {
     const off = app ? 54 : 0;
     const s = w / 402;   // 항상 화면 폭에 꽉 차게
     phone.style.height = `${h / s + off}px`;
+    phone.style.setProperty('--appoff', `${off}px`);
     // 가운데 정렬을 직접 계산해요 (기기마다 어긋나거나 한쪽이 잘리지 않게)
     phone.style.transformOrigin = '0 0';
     phone.style.transform = `translate(${(w - 402 * s) / 2}px, ${-off * s}px) scale(${s})`;
@@ -37,7 +41,17 @@ function fit() {
     stage.style.paddingTop = '20px';
   }
 }
-window.addEventListener('resize', fit);
+function svh() {
+  // 100svh: 브라우저 막대가 다 보일 때의 가장 작은 화면 높이
+  let p = document.getElementById('svhProbe');
+  if (!p) { p = document.createElement('div'); p.id = 'svhProbe'; p.style.cssText = 'position:fixed;left:0;top:0;width:1px;height:100svh;visibility:hidden;pointer-events:none'; document.body.appendChild(p); }
+  return p.offsetHeight || 1e9;
+}
+function refit() { fit(); if (window.runiLayout) window.runiLayout(); }
+window.addEventListener('resize', refit);
+window.addEventListener('orientationchange', () => setTimeout(refit, 300));
+if (window.visualViewport) visualViewport.addEventListener('resize', refit);
+window.addEventListener('load', () => { refit(); setTimeout(refit, 500); setTimeout(refit, 1500); });
 fit();
 
 /* ---------- 상태바 채우기 ---------- */

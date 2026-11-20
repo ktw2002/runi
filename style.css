@@ -1540,7 +1540,7 @@ p.abs { white-space: nowrap; }
 
 /* 받은 메시지 알림 (위에서 내려와요) */
 .push-banner {
-  position: absolute; left: 10px; top: 10px; width: 382px; min-height: 76px; padding: 12px 14px 12px 62px; z-index: 60;
+  position: absolute; left: 10px; top: calc(var(--appoff, 0px) + 10px); width: 382px; min-height: 76px; padding: 12px 14px 12px 62px; z-index: 60;
   border-radius: 22px; background: rgba(250, 250, 252, .94); -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px);
   box-shadow: 0 8px 26px rgba(20, 30, 60, .22); text-align: left;
   transform: translateY(-130%); opacity: 0; pointer-events: none;
@@ -1553,7 +1553,7 @@ p.abs { white-space: nowrap; }
 .pb-top b { font-weight: 700; letter-spacing: .5px; }
 .pb-who { display: flex; align-items: center; gap: 6px; margin-top: 3px; font-size: 15px; font-weight: 800; color: #111; }
 .pb-who img { width: 20px; height: 20px; border-radius: 50%; object-fit: cover; }
-.pb-msg { display: block; margin-top: 2px; font-size: 14.5px; color: #222; line-height: 20px; }
+.pb-msg { display: block; margin-top: 2px; font-size: 14.5px; color: #222; line-height: 20px; white-space: normal; word-break: keep-all; overflow-wrap: anywhere; }
 
 /* 상점 상단 탭 */
 .sh-tabs { position: absolute; left: 0; top: 128px; width: 402px; height: 86px; background: #fff; z-index: 3; }
