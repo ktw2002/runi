@@ -47,7 +47,13 @@ function svh() {
   if (!p) { p = document.createElement('div'); p.id = 'svhProbe'; p.style.cssText = 'position:fixed;left:0;top:0;width:1px;height:100svh;visibility:hidden;pointer-events:none'; document.body.appendChild(p); }
   return p.offsetHeight || 1e9;
 }
-function refit() { fit(); if (window.runiLayout) window.runiLayout(); }
+function typing() { const a = document.activeElement; return a && /^(INPUT|TEXTAREA|SELECT)$/.test(a.tagName) && !/^(checkbox|radio|file|button|submit)$/.test(a.type); }
+function refit(e) {
+  // 글자 입력 중 키보드가 올라와서 생긴 높이 변화는 무시해요 (버튼이 입력칸을 가리지 않게)
+  if (typing() && e && (e.type === 'resize')) return;
+  fit(); if (window.runiLayout) window.runiLayout();
+}
+document.addEventListener('focusout', () => setTimeout(() => { if (!typing()) refit(); }, 350));
 window.addEventListener('resize', refit);
 window.addEventListener('orientationchange', () => setTimeout(refit, 300));
 if (window.visualViewport) visualViewport.addEventListener('resize', refit);
