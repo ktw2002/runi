@@ -279,7 +279,7 @@ const BOT_P={"s": {"w": 1.17, "hide": 34, "bot": 20, "k": 0.55}, "l": {"w": 1.16
   /* ---------- 옷가게 ---------- */
   const shop = document.querySelector('#closetShop .canvas');
   let shopCat = 'all';
-  const HIDDEN = new Set(['top-8', 'top-10']);   // 하트 플라워 후드티 · 네이비 배색 후드집업은 팔지 않아요
+  const HIDDEN = new Set(['top-2', 'top-8', 'top-10']);   // 스카이블루 트랙탑 · 하트 플라워 후드티 · 네이비 배색 후드집업은 팔지 않아요
   const allIds = cat => cat === 'acc' ? [...ITEMS.hand.map((_, i) => `hand-${i + 1}`), ...ITEMS.body.map((_, i) => `body-${i + 1}`)]
     : cat === 'all' ? [...CATS.flatMap(([k]) => allIds(k))] : ITEMS[cat].map((_, i) => `${cat}-${i + 1}`).filter(id => !HIDDEN.has(id));
   function renderShop() {
