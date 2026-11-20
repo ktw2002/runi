@@ -1808,3 +1808,6 @@ html, body { touch-action: pan-x pan-y; -webkit-text-size-adjust: 100%; text-siz
 /* 기본 정보 입력칸: 아이콘 · 이름 · 입력값 세로줄을 모두 맞춰요 */
 #info .field-info .lbl { left: 54px; transform: none; top: 1px; }
 #info .gender button { width: 72px; }
+
+/* 홈 화면은 스크롤되지 않게 고정해요 */
+#home { overflow: hidden; overscroll-behavior: none; }
