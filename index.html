@@ -13,7 +13,7 @@
   <link rel="apple-touch-icon" href="assets/icon-180.png" />
   <title>Runi - 오늘의 작은 발걸음</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=20261120c" />
   <meta name="robots" content="noindex, nofollow" />
 </head>
 <body>
@@ -434,23 +434,23 @@
           <!-- 이름 -->
           <label class="abs field-info" style="top:397.78px">
             <img src="assets/ic-name.png" alt="" class="ic" />
-            <span class="lbl" style="left:70px">닉네임</span>
-            <input type="text" id="nickInput" placeholder="닉네임을 입력해주세요." maxlength="12" style="left:128px;width:180px" />
+            <span class="lbl">닉네임</span>
+            <input type="text" id="nickInput" placeholder="닉네임을 입력해주세요." maxlength="12" style="left:172px;width:150px" />
           </label>
           <!-- 성별 -->
           <div class="abs field-info" style="top:472.78px">
             <img src="assets/ic-gender.png" alt="" class="ic" />
-            <span class="lbl" style="left:66px">성별</span>
+            <span class="lbl">성별</span>
             <div class="gender" id="gender">
-              <button type="button" style="left:115px">여성</button>
-              <button type="button" class="on" style="left:228px">남성</button>
+              <button type="button" style="left:172px">여성</button>
+              <button type="button" class="on" style="left:252px">남성</button>
             </div>
           </div>
           <!-- 생년월일 -->
           <label class="abs field-info" style="top:547.78px">
             <img src="assets/ic-birth.png" alt="" class="ic" />
-            <span class="lbl" style="left:80.5px">생년월일</span>
-            <input type="text" inputmode="numeric" placeholder="YYYY.MM.DD" maxlength="10" id="birth" style="left:140px;width:150px" />
+            <span class="lbl">생년월일</span>
+            <input type="text" inputmode="numeric" placeholder="YYYY.MM.DD" maxlength="10" id="birth" style="left:172px;width:115px" />
             <button type="button" class="cal-open" id="calOpen" aria-label="달력에서 생년월일 고르기" style="left:286px;top:3px;width:48px;height:45px">
               <img src="assets/chevron-down.svg" alt="" style="position:absolute;left:15.25px;top:18.25px;width:18.5px;height:10.5px;transform:rotate(180deg)" />
             </button>
@@ -458,14 +458,14 @@
           <!-- 키 -->
           <label class="abs field-info" style="top:622.78px">
             <img src="assets/ic-height.png" alt="" class="ic" />
-            <span class="lbl" style="left:81px">키 (선택)</span>
-            <input type="number" inputmode="decimal" placeholder="입력해주세요." style="left:140px;width:150px" />
+            <span class="lbl">키 (선택)</span>
+            <input type="number" inputmode="decimal" placeholder="입력해주세요." style="left:172px;width:120px" />
             <span class="unit">cm</span>
           </label>
           <!-- 몸무게 -->
           <label class="abs field-info" style="top:697.78px">
-            <img src="assets/ic-weight.png" alt="" class="ic" style="left:2.5px;top:5px;width:44px;height:44px" />
-            <span class="lbl" style="left:96.5px">몸무게 (선택)</span>
+            <img src="assets/ic-weight.png" alt="" class="ic" />
+            <span class="lbl">몸무게 (선택)</span>
             <input type="number" inputmode="decimal" placeholder="입력해주세요." style="left:172px;width:120px" />
             <span class="unit">Kg</span>
           </label>
@@ -668,11 +668,11 @@
     </svg>
   </template>
 
-  <script src="flows.js"></script>
-  <script src="script.js"></script>
-  <script src="community.js"></script>
-  <script src="rooms.js"></script>
-  <script src="closet.js"></script>
+  <script src="flows.js?v=20261120c"></script>
+  <script src="script.js?v=20261120c"></script>
+  <script src="community.js?v=20261120c"></script>
+  <script src="rooms.js?v=20261120c"></script>
+  <script src="closet.js?v=20261120c"></script>
   <script>
     // 그림 저장 막기 (우클릭 · 길게 누르기 메뉴 · 끌어다 놓기)
     document.addEventListener('contextmenu', e => { if (!e.target.closest('input,textarea')) e.preventDefault(); });
@@ -681,7 +681,7 @@
     ['gesturestart', 'gesturechange', 'gestureend'].forEach(t => document.addEventListener(t, e => e.preventDefault(), { passive: false }));
     document.addEventListener('touchmove', e => { if (e.touches.length > 1) e.preventDefault(); }, { passive: false });
   </script>
-  <script src="fitlayout.js"></script>
-  <script src="pwa.js"></script>
+  <script src="fitlayout.js?v=20261120c"></script>
+  <script src="pwa.js?v=20261120c"></script>
 </body>
 </html>

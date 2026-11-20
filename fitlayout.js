@@ -19,7 +19,7 @@
       // 위쪽 내용: 화면 전체 배경 그림 · 글자 없는 장식 상자는 빼고 계산해요
       const deco = el => (el.offsetTop < 60 && el.offsetHeight > 500) || (el.tagName === 'DIV' && !el.children.length && !el.textContent.trim());
       const upper = kids.filter(el => el.offsetTop < split && !deco(el));
-      let shift = (id === 'character' || id === 'start') ? 0 : Math.min(0, H - base);   // 카드가 큰 화면은 끌어올리지 않고 버튼만 아래에 고정
+      let shift = (id === 'intro' || id === 'login') ? Math.min(0, H - base) : 0;   // 소개 · 로그인만 끌어올리고, 나머지는 버튼만 아래에 고정 (칸 간격이 어긋나지 않게)
       if (shift < 0 && lower.length) {
         const upperBottom = Math.max(0, ...upper.map(el => el.offsetTop + el.offsetHeight));
         const lowerTop = Math.min(...lower.map(el => el.offsetTop));

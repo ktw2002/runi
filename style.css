@@ -1804,3 +1804,7 @@ html, body { touch-action: pan-x pan-y; -webkit-text-size-adjust: 100%; text-siz
 
 /* 아래에 고정되는 버튼 받침: 스크롤해도 같은 자리에 있어요 */
 .pin-wrap { position: sticky; left: 0; width: 402px; height: 0; z-index: 60; }
+
+/* 기본 정보 입력칸: 아이콘 · 이름 · 입력값 세로줄을 모두 맞춰요 */
+#info .field-info .lbl { left: 54px; transform: none; top: 1px; }
+#info .gender button { width: 72px; }
