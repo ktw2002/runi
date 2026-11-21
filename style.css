@@ -1811,3 +1811,6 @@ html, body { touch-action: pan-x pan-y; -webkit-text-size-adjust: 100%; text-siz
 
 /* 홈 화면은 스크롤되지 않게 고정해요 */
 #home { overflow: hidden; overscroll-behavior: none; }
+
+/* 간편 로그인 확인 창은 위로 끌어올린 버튼들보다 항상 위에 보여요 */
+.sheet-wrap { z-index: 200 !important; }
